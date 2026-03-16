@@ -209,7 +209,7 @@
                     VivaCRM → PLAI: Новый клиент = Auto-регистрация
                 </span>
                 <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold border border-green-200">
-                    Базовый рейтинг: 5.00 (начальный уровень)
+                    Базовый рейтинг: 2.5 (начальный уровень)
                 </span>
                 <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold border border-purple-200">
                     Корт: Киоск активен → Игра началась
@@ -327,7 +327,7 @@
                             • ID: <code class="json-field">plai_user_uuid</code><br>
                             • Имя: <strong>Иван</strong> (из VivaCRM)<br>
                             • Телефон: <strong>79112223344</strong><br>
-                            • <span class="basic-rating">БАЗОВЫЙ РЕЙТИНГ: 5.00</span> <span class="text-xs text-gray-500">(не высокий, стартовый уровень)</span><br>
+                            • <span class="basic-rating">БАЗОВЫЙ РЕЙТИНГ: 2.5</span> <span class="text-xs text-gray-500">(не высокий, стартовый уровень)</span><br>
                             • Источник: <strong>VivaCRM</strong>
                         </div>
                     </div>
@@ -417,7 +417,7 @@
                                 <div class="font-semibold text-gray-800">Автозаполнение данных</div>
                                 <div class="text-sm text-gray-600">На экране уже отображается:<br>
                                 • Имя: <strong>Иван</strong> (из профиля PLAI)<br>
-                                • Рейтинг: <strong>5.00</strong> <span class="text-xs bg-yellow-200 px-2 py-0.5 rounded text-yellow-800">базовый/начальный</span><br>
+                                • Рейтинг: <strong>2.5</strong> <span class="text-xs bg-yellow-200 px-2 py-0.5 rounded text-yellow-800">базовый/начальный</span><br>
                                 • Метка "Организатор"</div>
                             </div>
                         </div>
@@ -468,7 +468,7 @@
                                 <img src="https://i.pravatar.cc/150?img=11" class="w-10 h-10 rounded-full border-2 border-slate-900">
                                 <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-gray-700 flex items-center justify-center text-xs">?</div>
                             </div>
-                            <div class="text-xs">Иван <span class="text-gray-500">(5.00)</span></div>
+                            <div class="text-xs">Иван <span class="text-gray-500">(2.5)</span></div>
                         </div>
                         
                         <div class="text-2xl font-bold text-gray-600 italic">VS</div>
@@ -568,7 +568,7 @@
             
             <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl p-6 text-center shadow-lg">
                 <div class="text-xl font-bold mb-2">Корт №3 активен</div>
-                <div class="text-green-100 mb-4">Иван <span class="text-sm opacity-75">(базовый рейтинг 5.00)</span> vs Гости • 09:00 - 10:00</div>
+                <div class="text-green-100 mb-4">Иван <span class="text-sm opacity-75">(базовый рейтинг 2.5)</span> vs Гости • 09:00 - 10:00</div>
                 <div class="flex justify-center gap-4 text-xs">
                     <span class="bg-white/20 px-3 py-1 rounded-full">VivaCRM бронь: подтверждена</span>
                     <span class="bg-white/20 px-3 py-1 rounded-full">PLAI аккаунт: создан с базовым рейтингом</span>
@@ -597,7 +597,7 @@
                     <div class="w-8 text-center text-green-400 font-bold">2</div>
                     <div class="flex-1">
                         <span class="text-green-300 font-semibold">PLAI Auto-Registration</span> → 
-                        Новый аккаунт с <span class="basic-rating text-xs">БАЗОВЫМ РЕЙТИНГОМ 5.00</span> (не высокий, начальный уровень)
+                        Новый аккаунт с <span class="basic-rating text-xs">БАЗОВЫМ РЕЙТИНГОМ 2.5</span> (не высокий, начальный уровень)
                     </div>
                 </div>
                 
@@ -620,23 +620,13 @@
         </div>
 
         <!-- Edge Cases -->
-        <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="mt-8">
             <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-yellow-500">
                 <h4 class="font-bold text-yellow-900 mb-3">⚠️ Граничные случаи</h4>
                 <ul class="space-y-2 text-sm text-gray-700">
-                    <li><strong>Новый игрок:</strong> Автоматически создаётся профиль PLAI с <span class="basic-rating text-xs">БАЗОВЫМ РЕЙТИНГОМ 5.00</span> (начальный уровень, не высокий)</li>
+                    <li><strong>Новый игрок:</strong> Автоматически создаётся профиль PLAI с <span class="basic-rating text-xs">БАЗОВЫМ РЕЙТИНГОМ 2.5</span> (начальный уровень, не высокий)</li>
                     <li><strong>Существующий игрок:</strong> Подтягивается текущий рейтинг и статистика</li>
                     <li><strong>Групповая игра:</strong> Любой из 4 игроков может нажать "Начать игру"</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-500">
-                <h4 class="font-bold text-blue-900 mb-3">🎾 Режимы игры</h4>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li><strong>2 игрока:</strong> 1v1 (сингл)</li>
-                    <li><strong>3 игрока:</strong> 1v2 (дубл с перевесом)</li>
-                    <li><strong>4 игрока:</strong> 2v2 (классический Padel)</li>
-                    <li><strong>1 игрок:</strong> Тренировка (учёт времени)</li>
                 </ul>
             </div>
         </div>
